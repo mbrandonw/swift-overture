@@ -12,7 +12,7 @@ linux-main:
 		--args testimports='$(imports)' \
 		&& mv ./Tests/LinuxMain.generated.swift ./Tests/LinuxMain.swift
 
-test-linux: linux-main
+test-linux:
 	docker build --tag overture-testing . \
 		&& docker run --rm overture-testing
 
